@@ -24,10 +24,17 @@ import java.util.Random;
 			}
 		}
 		System.gc();
-		int rand = new Random.nextInt(6);
+		int rand = new Random.nextInt(1);
 		int rand1 = new Random.nextInt(6);
 		String[] PronounSubject = {"Je","Tu","Il","Elle","On","Nous","Vous","Ils","Elles"}
-		
+		switch(rand){
+		case 0:
+			//If statments inside here maybe
+			break;
+		case 1:
+			//If statments inside here maybe
+			break;
+		}
 		
 	}
 	}
