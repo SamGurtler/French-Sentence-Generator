@@ -1,70 +1,63 @@
 abaisser
 abaisse
-abaissons
 abaisses
-abaissez
 abaisse
+abaissons
+abaissez
 abaissent
 s’abaisser
 m’abaisse
-nous abaissons
 t’abaisses
-vous abaissez
 s’abaisse
+nous abaissons
+vous abaissez
 s’abaissent
 abasourdir
 abasourdis
-abasourdissons
 abasourdis
-abasourdissez
 abasourdit
+abasourdissons
+abasourdissez
 abasourdissent
 abattre
 abats
-abattons
 abats
-abattez
 abat
+abattons
+abattez
 abattent
 abolir
 abolis
-abolissons
 abolis
-abolissez
 abolit
+abolissons
+abolissez
 abolissent
 absoudre
 absous
-absolvons
 absous
-absolvez
 absout
+absolvons
+absolvez
 absolvent
 s’abstenir
 m’abstiens
-nous abstenons
 t’abstiens
-vous abstenez
 s’abstient
+nous abstenons
+vous abstenez
 s’abstiennent
 accepter
 accepte
-acceptons
 acceptes
-acceptez
 accepte
+acceptons
+acceptez
 acceptent
 acclamer
 acclame
-acclamons
 acclames
-acclamez
 acclame
+acclamons
+acclamez
 acclament
-
-
-
-
-
-
-
