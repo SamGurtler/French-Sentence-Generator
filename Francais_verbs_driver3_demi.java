@@ -14,13 +14,13 @@ import java.util.Random;
 				VerbLoader[y] = scan.nextLine();
 			}
 			for(int z = 0;z<7;z++){
-			Francais_verbs[z] VerbList = new Francais_verbs(VerbLoader[0],VerbLoader[1],VerbLoader[2],VerbLoader[3],VerbLoader[4],VerbLoader[5],VerbLoader[6]);
+				VerbList[z] = new Francais_verbs(VerbLoader[0],VerbLoader[1],VerbLoader[2],VerbLoader[3],VerbLoader[4],VerbLoader[5],VerbLoader[6]);
 			}
 		}
 		//Deletes Verbloader String array
 		for(int x = 0;x<63;x+7){
 			for(int y = 0;y<7;y++){
-				VerbLoader[y] = null
+				VerbLoader[y] = null;
 			}
 		}
 		System.gc();
