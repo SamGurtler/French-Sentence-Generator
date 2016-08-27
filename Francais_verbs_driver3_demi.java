@@ -9,7 +9,7 @@ import java.util.Random;
 		Scanner scan = new Scanner(Verbs);
 		String[] VerbLoader = new String[7];
 		//makes
-		for(int x = 0;x<63;x+7){
+		for(int x = 0;x<63;x+=7){
 			for(int y = 0;y<7;y++){
 				VerbLoader[y] = scan.nextLine();
 			}
