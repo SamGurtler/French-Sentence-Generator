@@ -18,7 +18,7 @@ import java.util.Random;
 			}
 		}
 		//Deletes Verbloader String array
-		for(int x = 0;x<63;x+7){
+		for(int x = 0;x<63;x+=7){
 			for(int y = 0;y<7;y++){
 				VerbLoader[y] = null;
 			}
