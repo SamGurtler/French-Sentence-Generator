@@ -56,98 +56,62 @@ import java.util.Random;
 			//                           0    1    2    2     2     3      4      5     5
 			switch(Sentencetype){
 				case 0:	System.out.print(PronounSubject[subject_Conjugation]+" ");
-				char[] chckstrtwvowel = VerbList[random_Verb_Int].getVerb(conjugation_index).toCharArray();
-				switch(chckstrtwvowel[0]){
-					case 'a': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'e': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'i': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'o': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'u': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'é': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'è': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'à': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'ù': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'â': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'ê': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'î': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'ô': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'û': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'ë': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'ï': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					case 'ü': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-					default: System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-						break;
-				}
-				chckstrtwvowel = null;
-				System.gc();
-				break;
-				case 1:
-					System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
-					break;
-				/**/case 2:
-					System.out.print(PronounSubject[subject_Conjugation]+" ");
-					char[] chckstrtwvowel1 = VerbList[random_Verb_Int].getVerb(conjugation_index).toCharArray();
-					switch(chckstrtwvowel1[0]){
-						case 'a': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'e': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'i': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'o': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'u': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'é': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'è': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'à': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'ù': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'â': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'ê': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'î': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'ô': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'û': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'ë': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'ï': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						case 'ü': System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
-						default: System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-							break;
+					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index)){
+						System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					}
-					chckstrtwvowel1 = null;
-					System.gc();
+					else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					break;
-					default:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
-						break;/**/
+				case 1:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
+					break;
+				case 2:System.out.print(PronounSubject[subject_Conjugation]+" ");
+					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index)){
+						System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+					}
+					else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+					break;
+				default:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
+					break;
 			}
 		}
+		public boolean StrtsWthVwls(String chckstrtwvowel ){
+			char[] chckstrtwvowel1 = chckstrtwvowel.toCharArray();
+			switch(chckstrtwvowel1[0]){
+				case 'a': return true
+					break;
+				case 'e': return true
+					break;
+				case 'i': return true
+					break;
+				case 'o': return true
+					break;
+				case 'u': return true
+					break;
+				case 'Ã©': return true
+					break;
+				case 'Ã¨': return true
+					break;
+				case 'Ã ': return true
+					break;
+				case 'Ã¹': return true
+					break;
+				case 'Ã¢': return true
+					break;
+				case 'Ãª': return true
+					break;
+				case 'Ã®': return true
+					break;
+				case 'Ã´': return true
+					break;
+				case 'Ã»': return true
+					break;
+				case 'Ã«': return true
+					break;
+				case 'Ã¯': return true
+					break;
+				case 'Ã¼': return true
+					break;
+				default: return false
+					break;
+			}
 	}
 	
