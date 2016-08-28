@@ -63,7 +63,10 @@ import java.util.Random;
 					break;
 				case 1:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 					break;
-				case 2:System.out.print(PronounSubject[subject_Conjugation]+" ");
+				case 2:	if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index)||subject_conjugation = 1){
+				 		System.out.print("J'");
+					}
+					else System.out.print(PronounSubject[subject_Conjugation]+" ");
 					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index)){
 						System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					}
