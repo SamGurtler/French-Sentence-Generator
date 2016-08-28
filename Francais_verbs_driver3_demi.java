@@ -2,21 +2,27 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random; 
-	// Not compiled yet
 	public class Francais_verbs_driver3_demi{
 		public static void main(String[]args) throws FileNotFoundException{
-		File Verbs = new File(System.getProperty("user.dir"),"Verbs.txt");
+		File Verbs = new File(System.getProperty("user.dir")+"/Verbs.txt");
 		Francais_verbs[] VerbList = new Francais_verbs[7]; 
 		Scanner scan = new Scanner(Verbs);
 		String[] VerbLoader = new String[7];
 		//makes
-		for(int x = 0;x<63;x+=7){
+		for(int x = 0;x<7;x++){
+			//System.out.println("+++++++++++++++++++++++++++++++++\n");
 			for(int y = 0;y<7;y++){
 				VerbLoader[y] = scan.nextLine();
+				//System.out.print("["+VerbLoader[y]+"]");
 			}
-			for(int z = 0;z<7;z++){
-				VerbList[z] = new Francais_verbs(VerbLoader[0],VerbLoader[1],VerbLoader[2],VerbLoader[3],VerbLoader[4],VerbLoader[5],VerbLoader[6]);
-			}
+			//System.out.println("\n+++++++++++++++++++++++++++++++++");
+				VerbList[x] = new Francais_verbs(VerbLoader[0],VerbLoader[1],VerbLoader[2],VerbLoader[3],VerbLoader[4],VerbLoader[5],VerbLoader[6]);
+				/*System.out.println("\n-------------------------------------------------");
+				System.out.println(VerbList[x].getInf());
+				System.out.println(VerbList[x].getVerb(0)+" "+VerbList[x].getVerb(3));
+				System.out.println(VerbList[x].getVerb(1)+" "+VerbList[x].getVerb(4));
+				System.out.println(VerbList[x].getVerb(2)+" "+VerbList[x].getVerb(5));
+				System.out.println("-------------------------------------------------");*/
 		}
 		//Deletes Verbloader String array
 		for(int x = 0;x<63;x+=7){
@@ -52,11 +58,11 @@ import java.util.Random;
 		case 0:
 			//If statments inside here maybe
 			
-			System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
+			System.out.println(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 			break;
 		case 1:
 			//If statments inside here maybe
-			System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
+			System.out.println(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 			break;
 		}
 	}

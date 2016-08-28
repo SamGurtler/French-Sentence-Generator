@@ -1,17 +1,17 @@
-abaisser
+﻿abaisser
 abaisse
 abaisses
 abaisse
 abaissons
 abaissez
 abaissent
-s’abaisser
-m’abaisse
-t’abaisses
-s’abaisse
+s'abaisser
+m'abaisse
+t'abaisses
+s'abaisse
 nous abaissons
 vous abaissez
-s’abaissent
+s'abaissent
 abasourdir
 abasourdis
 abasourdis
@@ -40,13 +40,13 @@ absout
 absolvons
 absolvez
 absolvent
-s’abstenir
-m’abstiens
-t’abstiens
-s’abstient
+s'abstenir
+m'abstiens
+t'abstiens
+s'abstient
 nous abstenons
 vous abstenez
-s’abstiennent
+s'abstiennent
 accepter
 accepte
 acceptes
