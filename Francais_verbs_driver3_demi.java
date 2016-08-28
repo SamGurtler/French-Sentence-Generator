@@ -1,10 +1,11 @@
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Random; 
 	// Not compiled yet
 	public class Francais_verbs_driver3_demi{
-		public static void main(String[]args){
-		File Verbs = new File("French/Verbs.txt");
+		public static void main(String[]args) throws FileNotFoundException{
+		File Verbs = new File(System.getProperty("user.dir"),"Verbs.txt");
 		Francais_verbs[] VerbList = new Francais_verbs[7]; 
 		Scanner scan = new Scanner(Verbs);
 		String[] VerbLoader = new String[7];
@@ -23,37 +24,41 @@ import java.util.Random;
 				VerbLoader[y] = null;
 			}
 		}
+		scan.close();
 		System.gc();
-		int rand = new Random.nextInt(1);
-		int rand1 = new Random.nextInt(8);
-		int rand2 = new Random.nextInt(6);
-		int conjugation_index = rand1;
-		if(rand1 = 2||rand1 = 3||rand1 = 4){
+		Random rand = new Random();
+		Random rand1 = new Random();
+		Random rand2 = new Random();
+		int Sentencetype =  rand.nextInt(1);
+		int subject_Conjugation = rand1.nextInt(8);
+		int random_Verb_Int = rand2.nextInt(6);
+		int conjugation_index = subject_Conjugation;
+		if(subject_Conjugation == 2||subject_Conjugation == 3||subject_Conjugation == 4){
 			conjugation_index = 2;
 		}
-		if(rand1=5){
+		if(subject_Conjugation==5){
 			conjugation_index = 3;
 		}
-		if(rand1=6){
-			conjagation_index = 4;
+		if(subject_Conjugation==6){
+			conjugation_index = 4;
 		}
-		if(rand1=7||rand1=8){
+		if(subject_Conjugation==7||subject_Conjugation==8){
 			conjugation_index = 5;
 		}
 		String[] PronounSubject = {"Je","Tu","Il","Elle","On","Nous","Vous","Ils","Elles"};
 		//                           0    1    2    3     4     5      6      7     8
 		//                           0    1    2    2     2     3      4      5     5
-		switch(rand){
+		switch(Sentencetype){
 		case 0:
 			//If statments inside here maybe
 			
-			System.out.println(PronounSubject[rand1]+" "+VerbList[rand2].getVerb[conjugation_index]);
+			System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 			break;
 		case 1:
 			//If statments inside here maybe
+			System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 			break;
 		}
-		
 	}
 	}
 	
