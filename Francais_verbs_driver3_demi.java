@@ -56,65 +56,86 @@ import java.util.Random;
 			//                           0    1    2    2     2     3      4      5     5
 			switch(Sentencetype){
 				case 0:	System.out.print(PronounSubject[subject_Conjugation]+" ");
-					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index)){
+					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
 						System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					}
 					else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					break;
 				case 1:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 					break;
-				case 2:	if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index)||subject_conjugation = 1){
-				 		System.out.print("J'");
-					}
-					else System.out.print(PronounSubject[subject_Conjugation]+" ");
-					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index)){
-						System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-					}
-					else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
-					break;
-				default:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
+				case 2:	
+						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_conjugation == 1){
+							System.out.print("J'");
+						}
+						else System.out.print(PronounSubject[subject_Conjugation]+" ");
+						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
+							System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+						}
+						else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+						break;
+				default:
+					System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 					break;
 			}
 		}
-		public boolean StrtsWthVwls(String chckstrtwvowel ){
+		public static boolean StrtsWthVwls(String chckstrtwvowel ){
 			char[] chckstrtwvowel1 = chckstrtwvowel.toCharArray();
-			switch(chckstrtwvowel1[0]){
-				case 'a': return true;
+			switch((int)chckstrtwvowel1[0]){
+				case 97: 
+					return true;
 					break;
-				case 'e': return true;
+				case 101: 
+					return true;
 					break;
-				case 'i': return true;
+				case 105: 
+					return true;
 					break;
-				case 'o': return true;
+				case 111: 
+					return true;
 					break;
-				case 'u': return true;
+				case 117: 
+					return true;
 					break;
-				case 'é': return true;
+				case 130: 
+					return true;
 					break;
-				case 'è': return true;
+				case 138: 
+					return true;
 					break;
-				case 'à': return true;
+				case 133: 
+					return true;
 					break;
-				case 'ù': return true;
+				case 151: 
+					return true;
 					break;
-				case 'â': return true;
+				case 131: 
+					return true;
 					break;
-				case 'ê': return true;
+				case 136: 
+					return true;
 					break;
-				case 'î': return true;
+				case 140: 
+					return true;
 					break;
-				case 'ô': return true;
+				case 147: 
+					return true;
 					break;
-				case 'û': return true;
+				case 150: 
+					return true;
 					break;
-				case 'ë': return true;
+				case 137: 
+					return true;
 					break;
-				case 'ï': return true;
+				case 139: 
+					return true;
 					break;
-				case 'ü': return true;
+				case 129: 
+					return true;
 					break;
-				default: return false;
+				default: 
+					return false;
 					break;
 			}
 	}
 	
+	}
