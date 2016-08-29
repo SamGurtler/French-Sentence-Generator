@@ -64,7 +64,7 @@ import java.util.Random;
 				case 1:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 					break;
 				case 2:	
-						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_conjugation == 1){
+						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_Conjugation == 1){
 							System.out.print("J'");
 						}
 						else System.out.print(PronounSubject[subject_Conjugation]+" ");
