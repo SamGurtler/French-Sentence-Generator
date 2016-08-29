@@ -79,41 +79,41 @@ import java.util.Random;
 		public boolean StrtsWthVwls(String chckstrtwvowel ){
 			char[] chckstrtwvowel1 = chckstrtwvowel.toCharArray();
 			switch(chckstrtwvowel1[0]){
-				case 'a': return true
+				case 'a': return true;
 					break;
-				case 'e': return true
+				case 'e': return true;
 					break;
-				case 'i': return true
+				case 'i': return true;
 					break;
-				case 'o': return true
+				case 'o': return true;
 					break;
-				case 'u': return true
+				case 'u': return true;
 					break;
-				case 'é': return true
+				case 'é': return true;
 					break;
-				case 'è': return true
+				case 'è': return true;
 					break;
-				case 'à': return true
+				case 'à': return true;
 					break;
-				case 'ù': return true
+				case 'ù': return true;
 					break;
-				case 'â': return true
+				case 'â': return true;
 					break;
-				case 'ê': return true
+				case 'ê': return true;
 					break;
-				case 'î': return true
+				case 'î': return true;
 					break;
-				case 'ô': return true
+				case 'ô': return true;
 					break;
-				case 'û': return true
+				case 'û': return true;
 					break;
-				case 'ë': return true
+				case 'ë': return true;
 					break;
-				case 'ï': return true
+				case 'ï': return true;
 					break;
-				case 'ü': return true
+				case 'ü': return true;
 					break;
-				default: return false
+				default: return false;
 					break;
 			}
 	}
