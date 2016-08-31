@@ -2,12 +2,42 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random; 
+import java.util.ArrayList<E>;
 	public class Francais_verbs_driver3_demi{
 		public static void main(String[]args) throws FileNotFoundException{
+			//Not compiled
 			File Verbs = new File(System.getProperty("user.dir")+"/Verbs.txt");
 			Francais_verbs[] VerbList = new Francais_verbs[7]; 
 			Scanner scan = new Scanner(Verbs);
 			String[] VerbLoader = new String[7];
+			//File hasn't been made yet.Need to make file using notepad.
+			List<String> pluralMascN = new ArrayList();
+			File filepluralMascN = new File(System.getProperty("user.dir")+"/pluralMascN.txt");
+			Scanner scanpluralMascN = new Scanner(filepluralMascN);
+			//File hasn't been made yet.Need to make file using notepad.
+			List<String> pluralFemN = new ArrayList();
+			File filepluralFemN = new File(System.getProperty("user.dir")+"/pluralFemN.txt");
+			Scanner scanpluralFemN = new Scanner(filepluralFemN);
+			//File hasn't been made yet.Need to make file using notepad.
+			List<String> singularMascN = new ArrayList();
+			File filesingularMascN = new File(System.getProperty("user.dir")+"/singularMascN.txt");
+			Scanner scansingularMascN = new Scanner(filesingularMascN);
+			//File hasn't been made yet.Need to make file using notepad.
+			List<String> singularFemN = new ArrayList();
+			File filesingularFemN = new File(System.getProperty("user.dir")+"/singularFemN.txt");
+			Scanner scansingularFemN  = new Scanner(filesingularFemN);
+			while(scanpluralMascN.hasNext()){
+				 pluralMascN.add(scanpluralMascN.nextLine());
+			}
+			while(scanpluralFemN.hasNext()){
+				 pluralFemN.add(scanpluralFemN.nextLine());
+			}
+			while(scansingularMascN.hasNext()){
+				singularMascN.add(scansingularMascN.nextLine());
+			}
+			while(scansingularFemN.hasNext()){
+				singularFemN.add(scansingularFemN.nextLine());
+			}
 			//makes
 			for(int x = 0;x<7;x++){
 				//System.out.println("+++++++++++++++++++++++++++++++++\n");
