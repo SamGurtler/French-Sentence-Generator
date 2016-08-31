@@ -56,18 +56,20 @@ import java.util.Random;
 			//                           0    1    2    2     2     3      4      5     5
 			switch(Sentencetype){
 				case 0:	System.out.print(PronounSubject[subject_Conjugation]+" ");
-					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
+					//Not needed because ne or n' will always be in front of verb when negating.	
+					/*if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
 						System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					}
-					else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+					else*/ System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					break;
 				case 1:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
 					break;
 				case 2:	
-						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_Conjugation == 1){
+						//Not needed because ne or n' will always be in front of verb when negating.
+						/*if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_Conjugation == 1){
 							System.out.print("J'");
 						}
-						else System.out.print(PronounSubject[subject_Conjugation]+" ");
+						else*/ System.out.print(PronounSubject[subject_Conjugation]+" ");
 						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
 							System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 						}
@@ -83,58 +85,40 @@ import java.util.Random;
 			switch((int)chckstrtwvowel1[0]){
 				case 97: 
 					return true;
-					break;
-				case 101: 
+			case 101: 
 					return true;
-					break;
-				case 105: 
+			case 105: 
 					return true;
-					break;
-				case 111: 
+			case 111: 
 					return true;
-					break;
-				case 117: 
+			case 117: 
 					return true;
-					break;
-				case 130: 
+			case 130: 
 					return true;
-					break;
-				case 138: 
+			case 138: 
 					return true;
-					break;
-				case 133: 
+			case 133: 
 					return true;
-					break;
-				case 151: 
+			case 151: 
 					return true;
-					break;
-				case 131: 
+			case 131: 
 					return true;
-					break;
-				case 136: 
+			case 136: 
 					return true;
-					break;
-				case 140: 
+			case 140: 
 					return true;
-					break;
-				case 147: 
+			case 147: 
 					return true;
-					break;
-				case 150: 
+			case 150: 
 					return true;
-					break;
-				case 137: 
+			case 137: 
 					return true;
-					break;
-				case 139: 
+			case 139: 
 					return true;
-					break;
-				case 129: 
+			case 129: 
 					return true;
-					break;
-				default: 
+			default: 
 					return false;
-					break;
 			}
 	}
 	
