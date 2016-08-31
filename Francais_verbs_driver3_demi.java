@@ -55,29 +55,34 @@ import java.util.Random;
 			//                           0    1    2    3     4     5      6      7     8
 			//                           0    1    2    2     2     3      4      5     5
 			switch(Sentencetype){
-				case 0:	System.out.print(PronounSubject[subject_Conjugation]+" ");
-					//Not needed because ne or n' will always be in front of verb when negating.	
-					/*if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
+				case 0:	
+						System.out.print(PronounSubject[subject_Conjugation]+" ");
+					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
 						System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					}
-					else*/ System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+					else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 					break;
-				case 1:System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
+				case 1:
+					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_Conjugation == 1){
+						System.out.print("J'");
+					}
+					else System.out.print(PronounSubject[subject_Conjugation]+" ");
+					System.out.print(VerbList[random_Verb_Int].getVerb(conjugation_index));
 					break;
 				case 2:	
-						//Not needed because ne or n' will always be in front of verb when negating.
-						/*if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_Conjugation == 1){
-							System.out.print("J'");
-						}
-						else*/ System.out.print(PronounSubject[subject_Conjugation]+" ");
+						System.out.print(PronounSubject[subject_Conjugation]+" ");
 						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
 							System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 						}
 						else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
 						break;
 				default:
-					System.out.print(PronounSubject[subject_Conjugation]+" "+VerbList[random_Verb_Int].getVerb(conjugation_index));
-					break;
+						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_Conjugation == 1){
+							System.out.print("J'");
+						}
+						else System.out.print(PronounSubject[subject_Conjugation]+" ");
+						System.out.print(VerbList[random_Verb_Int].getVerb(conjugation_index));
+						break;
 			}
 		}
 		public static boolean StrtsWthVwls(String chckstrtwvowel ){
