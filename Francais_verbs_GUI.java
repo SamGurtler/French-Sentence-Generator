@@ -1,28 +1,55 @@
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-
 import javax.swing.*;
 import javax.swing.event.*;
 public class Francais_verbs_GUI extends JFrame implements ActionListener
 {
 	private static JButton startButton = new JButton("Click Me");
-
+	private static String SentenceCopy = new String("Click Me");
+	private static JPopupMenu pop = new JPopupMenu();
+	
 	public Francais_verbs_GUI(String title) 
  {
-    super(title);
+	super(title);
+	ImageIcon img = new ImageIcon(System.getProperty("user.dir")+"/Red_Dyed_Water_Bottle.png");
+	setIconImage(img.getImage());
     setSize(350, 100);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setVisible(true);
-    JPanel topBar = new JPanel();
+    FlowLayout flo = new FlowLayout();
+    setLayout(flo);
+    JPanel C = new JPanel();
+    //JMenuItem copy = new JMenuItem("Copy");
+    JButton copdy = new JButton("Copy");
+    add(C);
+    C.add(startButton);
+    C.add(copdy);
+    //startButton.add(pop);
+    //pop.add(copy);
+    /*copy.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    	StringSelection entry = new StringSelection(SentenceCopy);
+    	Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+    	clipboard.setContents(entry, entry);
+    	}
+    	});*/
+    copdy.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    	StringSelection entry = new StringSelection(SentenceCopy);
+    	Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+    	clipboard.setContents(entry, entry);
+    	}
+    	});
     startButton.addActionListener(this);
-    add(startButton);
+    //add(startButton);
 }
-
 public static void main(String[] args) {
     new Francais_verbs_GUI("French Sentence Generator").setVisible(true);
 }
@@ -191,9 +218,9 @@ public static boolean StrtsWthVwls(String chckstrtwvowel ){
 @Override
 public void actionPerformed(ActionEvent ae) {
     try {
-		startButton.setText(FSG());
+    	SentenceCopy = FSG();
+    	startButton.setText(SentenceCopy);
 	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 }
