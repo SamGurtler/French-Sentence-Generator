@@ -4,8 +4,9 @@ import java.io.FileNotFoundException;
 import java.util.Random; 
 import java.util.ArrayList;
 	public class Francais_verbs_driver3_demi{
-		public static void main(String[]args) throws FileNotFoundException{
+		public String FSG()throws FileNotFoundException{
 			//Not compiled
+			String FSG = new String("");
 			File Verbs = new File(System.getProperty("user.dir")+"/Verbs.txt");
 			Francais_verbs[] VerbList = new Francais_verbs[7]; 
 			Scanner scan = new Scanner(Verbs);
@@ -92,34 +93,35 @@ import java.util.ArrayList;
 			//                           0    1    2    2     2     3      4      5     5
 			switch(Sentencetype){
 				case 0:	
-						System.out.print(PronounSubject[subject_Conjugation]+" ");
+						FSG = FSG+PronounSubject[subject_Conjugation]+" ";
 					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
-						System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+						FSG = FSG+"n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas";
 					}
-					else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+					else FSG = FSG+"ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas";
 					break;
 				case 1:
 					if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_Conjugation == 1){
-						System.out.print("J'");
+						FSG = FSG+"J'";
 					}
-					else System.out.print(PronounSubject[subject_Conjugation]+" ");
-					System.out.print(VerbList[random_Verb_Int].getVerb(conjugation_index));
+					else FSG = FSG+PronounSubject[subject_Conjugation]+" ";
+					FSG = FSG+VerbList[random_Verb_Int].getVerb(conjugation_index);
 					break;
 				case 2:	
-						System.out.print(PronounSubject[subject_Conjugation]+" ");
+					FSG = FSG+PronounSubject[subject_Conjugation]+" ";
 						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))){
-							System.out.print("n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+							FSG = FSG+"n'"+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas";
 						}
-						else System.out.print("ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas");
+						else FSG = FSG+"ne "+VerbList[random_Verb_Int].getVerb(conjugation_index)+" pas";
 						break;
 				default:
 						if(StrtsWthVwls(VerbList[random_Verb_Int].getVerb(conjugation_index))||subject_Conjugation == 1){
-							System.out.print("J'");
+							FSG = FSG+"J'";
 						}
 						else System.out.print(PronounSubject[subject_Conjugation]+" ");
-						System.out.print(VerbList[random_Verb_Int].getVerb(conjugation_index));
+						FSG = FSG+VerbList[random_Verb_Int].getVerb(conjugation_index);
 						break;
 			}
+			return FSG;
 		}
 		public static boolean StrtsWthVwls(String chckstrtwvowel ){
 			char[] chckstrtwvowel1 = chckstrtwvowel.toCharArray();
