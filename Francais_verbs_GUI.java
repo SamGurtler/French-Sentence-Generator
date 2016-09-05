@@ -24,7 +24,7 @@ public class Francais_verbs_GUI extends JFrame implements ActionListener
 }
 
 public static void main(String[] args) {
-    new Francais_verbs_GUI("The Frantic Pipe Layer").setVisible(true);
+    new Francais_verbs_GUI("French Sentence Generator").setVisible(true);
 }
 
 public static String FSG()throws FileNotFoundException{
