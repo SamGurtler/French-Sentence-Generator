@@ -22,7 +22,7 @@ public class Francais_verbs implements Serializable
 	Verb[3] = Trois;
 	Verb[4] = Quatre;
 	Verb[5] = Cinq;
-	System.out.print("\t");
+	//System.out.print("\t");
 	//	Inf = this.Lire();
 	//Verb = this.getVerb();
 	}
